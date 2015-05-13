@@ -5,18 +5,18 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb1576119549268755</string>
 			</array>
+			<key>CFBundleURLName</key>
+			<string></string>
 		</dict>
 	</array>
 	<key>FacebookDisplayName</key>
 	<string>Qemotion</string>
 	<key>FacebookAppID</key>
-	<string>fb1576119549268755</string>
+	<string>1576119549268755</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

@@ -7,13 +7,58 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
+import Alamofire
+import SwiftyJSON
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController,  FBSDKLoginButtonDelegate {
+
+    @IBOutlet weak var fbLoginButton: FBSDKLoginButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        fbLoginButton.delegate = self
+        fbLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
+        
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
+
+            Alamofire.request(.GET,
+                "http://dev-api.qemotion.com/auth/facebook_access_token/callback",
+                parameters: [
+                    "access_token": accessToken,
+                    "user": [
+                        "username": "testazeaze"
+                    ]
+                ])
+                .responseJSON { (request, response, data, error) in
+                    if(error != nil) {
+                        NSLog("Error: \(error)")
+                        println(request)
+                        println(response)
+                    }
+                    else {
+                        var json = JSON(data!)
+                        
+                        println(json)
+                    }
+            }
+        }
     }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        println(result)
+        println(error)
+    }
+    
+
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

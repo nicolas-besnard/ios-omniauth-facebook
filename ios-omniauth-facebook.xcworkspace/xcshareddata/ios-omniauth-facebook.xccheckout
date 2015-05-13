@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9186A70E-9E53-4DA8-9661-7A01C7652460</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ios-omniauth-facebook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0E56B282002EAFDF45C8A56645FEF52FD5C4D7E6</key>
+		<string>github.com:nicolas-besnard/ios-omniauth-facebook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios-omniauth-facebook.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0E56B282002EAFDF45C8A56645FEF52FD5C4D7E6</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:nicolas-besnard/ios-omniauth-facebook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0E56B282002EAFDF45C8A56645FEF52FD5C4D7E6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E56B282002EAFDF45C8A56645FEF52FD5C4D7E6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-omniauth-facebook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

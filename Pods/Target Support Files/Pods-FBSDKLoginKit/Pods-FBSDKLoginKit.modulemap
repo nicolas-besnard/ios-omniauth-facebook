@@ -3,13 +3,4 @@ framework module FBSDKLoginKit {
 
   export *
   module * { export * }
-
-  private header "FBSDKLoginCompletion+Internal.h"
-  private header "FBSDKLoginKit+Internal.h"
-  private header "FBSDKLoginManager+Internal.h"
-  private header "_FBSDKLoginRecoveryAttempter.h"
-  private header "FBSDKLoginCompletion.h"
-  private header "FBSDKLoginError.h"
-  private header "FBSDKLoginManagerLogger.h"
-  private header "FBSDKLoginUtility.h"
 }
