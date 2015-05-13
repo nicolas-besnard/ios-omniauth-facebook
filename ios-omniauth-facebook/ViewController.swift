@@ -22,10 +22,32 @@ class ViewController: UIViewController,  FBSDKLoginButtonDelegate {
         
         fbLoginButton.delegate = self
         fbLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        println(result)
+        println(error)
+    }
+    
+
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         
+    }
+
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func didClickOnSendRequestButton(sender: AnyObject) {
+        requestAPI()
+    }
+    
+    private func requestAPI() {
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
-
+            
             Alamofire.request(.GET,
                 "http://dev-api.qemotion.com/auth/facebook_access_token/callback",
                 parameters: [
@@ -46,25 +68,9 @@ class ViewController: UIViewController,  FBSDKLoginButtonDelegate {
                         println(json)
                     }
             }
+        } else {
+            println("No Access Token")
         }
     }
-    
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        println(result)
-        println(error)
-    }
-    
-
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        
-    }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

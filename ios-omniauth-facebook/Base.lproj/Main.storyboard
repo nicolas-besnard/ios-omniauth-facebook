@@ -17,15 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utn-pv-bYE" customClass="FBSDKLoginButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="utn-pv-bYE" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="53" y="48" width="494" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mi3-XN-DXd"/>
+                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-an-9WD">
+                                <rect key="frame" x="72" y="167" width="138" height="30"/>
+                                <state key="normal" title="Send request to API">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickOnSendRequestButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nXJ-hG-YAe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="utn-pv-bYE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="37" id="31Y-BL-MQh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="utn-pv-bYE" secondAttribute="trailing" constant="37" id="Ldj-OJ-H3L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="utn-pv-bYE" secondAttribute="trailing" constant="37" id="AGp-MW-Hna"/>
+                            <constraint firstItem="utn-pv-bYE" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="28" id="ODj-T4-LrS"/>
+                            <constraint firstItem="utn-pv-bYE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="37" id="Php-f5-uoy"/>
                         </constraints>
                     </view>
                     <connections>
