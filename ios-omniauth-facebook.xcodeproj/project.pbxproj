@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A4412FD750C9BE7D4CCFD4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C16AAB401933258723D4A07 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		375D6CD61B032ED500B9835A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D6CD51B032ED500B9835A /* AppDelegate.swift */; };
 		375D6CD81B032ED500B9835A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D6CD71B032ED500B9835A /* ViewController.swift */; };
 		375D6CDB1B032ED500B9835A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375D6CD91B032ED500B9835A /* Main.storyboard */; };
@@ -36,6 +37,9 @@
 		375D6CE51B032ED500B9835A /* ios-omniauth-facebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-omniauth-facebookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		375D6CEA1B032ED500B9835A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		375D6CEB1B032ED500B9835A /* ios_omniauth_facebookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_omniauth_facebookTests.swift; sourceTree = "<group>"; };
+		3C16AAB401933258723D4A07 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B056BDD493D9E8968245A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		6DB118591BF8B4B569358C83 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A4412FD750C9BE7D4CCFD4 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,8 @@
 				375D6CD21B032ED500B9835A /* ios-omniauth-facebook */,
 				375D6CE81B032ED500B9835A /* ios-omniauth-facebookTests */,
 				375D6CD11B032ED500B9835A /* Products */,
+				9A83177CD08A58FA26A4BFB3 /* Pods */,
+				847A841B7505546F52177F54 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +119,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		847A841B7505546F52177F54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C16AAB401933258723D4A07 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A83177CD08A58FA26A4BFB3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47B056BDD493D9E8968245A9 /* Pods.debug.xcconfig */,
+				6DB118591BF8B4B569358C83 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 375D6CEF1B032ED500B9835A /* Build configuration list for PBXNativeTarget "ios-omniauth-facebook" */;
 			buildPhases = (
+				6A1DF22156CD3B35668475BF /* Check Pods Manifest.lock */,
 				375D6CCC1B032ED500B9835A /* Sources */,
 				375D6CCD1B032ED500B9835A /* Frameworks */,
 				375D6CCE1B032ED500B9835A /* Resources */,
+				61382CEDCDDAADF92699058A /* Embed Pods Frameworks */,
+				AF95FAA2AC66B1F101B2B7D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61382CEDCDDAADF92699058A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A1DF22156CD3B35668475BF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AF95FAA2AC66B1F101B2B7D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		375D6CCC1B032ED500B9835A /* Sources */ = {
@@ -338,6 +413,7 @@
 		};
 		375D6CF01B032ED500B9835A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B056BDD493D9E8968245A9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-omniauth-facebook/Info.plist";
@@ -348,6 +424,7 @@
 		};
 		375D6CF11B032ED500B9835A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DB118591BF8B4B569358C83 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ios-omniauth-facebook/Info.plist";
@@ -409,6 +486,7 @@
 				375D6CF11B032ED500B9835A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		375D6CF21B032ED500B9835A /* Build configuration list for PBXNativeTarget "ios-omniauth-facebookTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +495,7 @@
 				375D6CF41B032ED500B9835A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
